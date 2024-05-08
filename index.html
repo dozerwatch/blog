@@ -7,12 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Daily Updates About Learning Cybersecurity</h1>
 
     <section>
-        <h3>Saturday - April 20, 2024</h3>
+        <h3>Wednesday - May 8, 2024</h3>
+        <p>I worked on Program Interaction. The levels I had difficulty with are 48 and 52. I wasn't able to complete level 48 using pwntools, but was successful with the subprocess module. I will have to go back and find out why.</p>
 
-        <p></p>
+        <p>On level 52, I had difficulty understanding pipes and still do. If I spawn a cat process and PIPE its stdout, the process will not exit with ctrl+d, ctrl+c, or ctrl+z. I have to PIPE its stdin, too! Then I use the communicate() method to well ... communicate (to its stdin). </p>
+
+        <p>Today shows that I still have lots to learn about linux pipes and how to use it to interact with other processes and pwntools.</p>
+    </section>
+
+    <section>
+        <h3>Thursday - April 20, 2024</h3>
+        <p>I worked on Program Interaction, level 1 to 31. These are some things that I learned.</p>
+
+        <ul> 
+            <li>File descriptors are inherited from the parent, unless the FD_CLOEXEC is set by the parent on the file descriptor.</li> 
+            <li>The <i>argv</i> argument in <i>execve</i> must end with <i>NULL</i>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Saturday - April 18, 2024</h3>
+        <p>I finished on Program Misuse. Most levels were simple as GTFOBins had the exploits. </p>
+        <p>I learned that .so (shared output) files are linked during runtime. So if you change anything in a .so file, you don't need to recompile the main program.</p>
     </section>
 
 </body>
