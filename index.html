@@ -9,6 +9,13 @@
 <body>
 
     <section>
+        <h3>Saturday - May 11, 2024</h3>
+        <p>I did level 86 of Program Interaction today. Now the concept of program interaction is coming to fruition. My method is to redirect the input and ouput of the program challenge into named pipes. Then using python, I can read from the output_pipe and write to the input_pipe. The use of named pipes is very confusing due to blocking. I will touch on this more later. Now, we are able to interact with the challenge program, which is launched from a bash script, with a python program! This is program interaction, baby.</p>
+        <p>Why does using <mark>for line in opipe</mark> read line by line and not block, while using read() blocks?</p>
+        <p>Why do I need to flush() the input_pipe?</p>
+    </section>
+
+    <section>
         <h3>Friday - May 10, 2024</h3>
         <p>I did levels 74 - 85 of Program Interaction. These levels require manipulating the value of a random index in argv, the value of a random key in envp, and launching the challenge program in a specific current working  directory, all with different parent processes.</p>
         <p>I am getting a much better understanding of dup2().</p>

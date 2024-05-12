@@ -9,3 +9,9 @@ section {
 a {
     text-decoration: none;
 }
+
+mark {
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 0 3px 0 3px;
+}
