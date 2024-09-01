@@ -39,7 +39,12 @@
         <!-- Notes entry -->
         <div class="notes-entry">
             <h3 class="notes-title entry">Program Security - Memory Corruption Tips</h3>
-            <p class="entry"></p>
+            <p class="entry">A vulnerable program is given that does a buffer overread using the read() function. There is an important variable that determines which if-else condition is trigger. There is also a win() function.</p>
+            <p class="entry">Simplest way to memory corrupt is to input a shit load of data.</p>
+            <p class="entry">We can also use static analysis, tools like IDA, hexdump, gdb, to find the offset for the important variable. We will need address of start of input and address of important variable. The offset is the difference.</p>
+            <p class="entry">Another strategy is dynamic analysis with gdb. We can then poke around the program as it is running using effective breakpoints. At these breakpoints, we can examine registers and memory and much more.</p>
+            <p class="entry">gdb scripting. pwntools always breaks at start.</p>
+            <p class="entry">Cyclic value: a string where any 4-byte substring unique identifies the index. We can use this to find the padding size for the return address. Redirect control flow to win() function.</p>
         </div>
 
     </div>
