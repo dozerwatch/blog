@@ -1,14 +1,5 @@
-body {
-    background-color: bisque;
-}
-
 section {
     width: 600px;
-}
-
-a {
-    text-decoration: none;
-    color: blue;
 }
 
 mark {
