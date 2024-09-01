@@ -1,0 +1,27 @@
+.blog-entry, .learns-container, .reflections-container {
+    display: flex;
+}
+
+.blog-entry {
+    border-bottom: 1px solid black;
+}
+
+.learns-container, .reflections-container {
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.learns-container {
+    border-right: 1px dotted black;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+.entry-container, .date, .entry {
+    margin: 10px 5px;
+    text-align: left;
+}
