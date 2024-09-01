@@ -5,12 +5,12 @@
 }
 
 .notes-entry {
-    width: 33.26%;
+    width: 49.96%;
     border-right: 1px dotted black;
     border-bottom: 1px dotted black;
 }
 
-.third {
+.last {
     border-right: none;
 }
 
