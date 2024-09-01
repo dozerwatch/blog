@@ -4,81 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity Studies</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <section>
-        <h3>Saturday - May 18, 2024</h3>
-        <a href="https://stackoverflow.com/questions/5782279/why-does-a-read-only-open-of-a-named-pipe-block" target="_blank" >Explanation of named pipes blocking.</a>
-        <p></p>
-    </section>
-
-    <section>
-        <h3>Friday - May 17, 2024</h3>
-        <p>What does <mark>interactive()</mark> do exactly?</p>
-    </section>
-
-    <section>
-        <h3>Monday - May 13, 2024</h3>
-        <p>When I change the file descriptor of stdin to 1, why does the output still print to the terminal?</p>
-    </section>
-
-    <section>
-        <h3>Sunday - May 12, 2024</h3>
-        <p>I did levels 87 to 92. The levels are using named pipes with the parent process being a shellscript. I am confused on why sometimes backgrounding is okay and other times not. </p>
-    </section>
-
-    <section>
-        <h3>Saturday - May 11, 2024</h3>
-        <p>I did level 86 of Program Interaction today. Now the concept of program interaction is coming to fruition. My method is to redirect the input and ouput of the program challenge into named pipes. Then using python, I can read from the output_pipe and write to the input_pipe. The use of named pipes is very confusing due to blocking. I will touch on this more later. Now, we are able to interact with the challenge program, which is launched from a bash script, with a python program! This is program interaction, baby.</p>
-        <p>Why does using <mark>for line in opipe</mark> read line by line and not block, while using read() blocks?</p>
-        <p>Why do I need to flush() the input_pipe? <a href="https://stackoverflow.com/questions/7127075/what-exactly-is-file-flush-doing" target="_blank">I need</a> use flush() because this writes any data in the program buffer to the input_pipe. In this case, our answer lingers in the program buffer so a flush() is needed.</p>
-    </section>
-
-    <section>
-        <h3>Friday - May 10, 2024</h3>
-        <p>I did levels 74 - 85 of Program Interaction. These levels require manipulating the value of a random index in argv, the value of a random key in envp, and launching the challenge program in a specific current working  directory, all with different parent processes.</p>
-        <p>I am getting a much better understanding of dup2().</p>
-    </section>
-
-    <section>
-        <h3>Thursday - May 9, 2024</h3>
-        <p><a href="https://www.geeksforgeeks.org/pipe-system-call/" target="_blank">Conceptually</a>, a pipe is a connection between two processes, such that the standard output from one process becomes the standard input of the other process.</p>
-        <p>I did levels 61 - 72 of Program Interactions. The most interesting topic was redirecting stdout (stdin) of a process into stdin (stdout) of another process in C. I was able to understand this concept better today thanks to the article above.</p>
-    </section>
-
-    <section>
-        <h3>Wednesday - May 8, 2024</h3>
-        <p>Why does subprocess.Popen.communicate() work in ipython but fails in a python script?</p>
-
-        <p>I learned how to use pipes in C, redirecting the stdout of a program into the stdin of another. This process requires fork(), execve(), pipe(), and dup2(). There is still some confusion on how this works exactly.</p>
-    </section>
-
-    <section>
-        <h3>Tuesday - May 7, 2024</h3>
-        <p>I worked on Program Interaction. The levels I had difficulty with are 48 and 52. I wasn't able to complete level 48 using pwntools, but was successful with the subprocess module. I will have to go back and find out why.</p>
-
-        <p>On level 52, I had difficulty understanding pipes and still do. If I spawn a cat process and PIPE its stdout, the process will not exit with ctrl+d, ctrl+c, or ctrl+z. I have to PIPE its stdin, too! Then I use the communicate() method to well ... communicate (to its stdin). </p>
-
-        <p>Today shows that I still have lots to learn about linux pipes and how to use it to interact with other processes and pwntools.</p>
-    </section>
-
-    <section>
-        <h3>Thursday - April 20, 2024</h3>
-        <p>I worked on Program Interaction, level 1 to 31. These are some things that I learned.</p>
-
-        <ul> 
-            <li>File descriptors are inherited from the parent, unless the FD_CLOEXEC is set by the parent on the file descriptor.</li> 
-            <li>The <i>argv</i> argument in <i>execve</i> must end with <i>NULL</i>.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Saturday - April 18, 2024</h3>
-        <p>I finished on Program Misuse. Most levels were simple as GTFOBins had the exploits. </p>
-        <p>I learned that .so (shared output) files are linked during runtime. So if you change anything in a .so file, you don't need to recompile the main program.</p>
-    </section>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="old.html">Old</a>
+    </div>
 
 </body>
 </html>
