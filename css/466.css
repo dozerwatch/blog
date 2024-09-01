@@ -1,17 +1,19 @@
 .notes-container {
     display: flex;
-    flex-wrap: wrap;
-
+    flex-direction: column;
 }
 
 .notes-entry {
-    width: 49.9%;
-    border-right: 1px dotted black;
+    display: flex;
     border-bottom: 1px dotted black;
 }
 
-.last {
-    border-right: none;
+.first-container, .second-container {
+    width: 50%;
+}
+
+.first-container {
+    border-right: 1px dotted black;
 }
 
 .entry {

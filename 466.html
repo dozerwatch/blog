@@ -20,38 +20,43 @@
     <!-- Container for all class notes -->
     <div class="notes-container">
 
-        <!-- Notes entry -->
+        <!-- Two note entries -->
         <div class="notes-entry">
-            <h3 class="notes-title entry">Program Security - Shellcoding Tips</h3>
-            <p class="entry">Build shellcode using as, ld, and objcopy.</p>
-            <p class="entry">View shellcode with od, hexdump.</p>
-            <p class="entry">Build shellcode using gcc and objcopy.</p>
-            <p class="entry">Build shellcode using python pwntools.</p>
-            <p class="entry">Write assembly in pwntools and view it with disasm().</p>
-            <p class="entry">Shellcraft</p>
-            <p class="entry">Write shellcode bytes into a file.</p>
-            <p class="entry">Use strace to debug.</p>
-            <p class="entry">Use gdb.debug_assembly() to debug assembly instructions. It launches a gdb sessions that starts the beginning of shellcode.</p>
-            <p class="entry">Always use p.interactive() for a process() until you understand why.</p>
-            <p class="entry">Use gdb.debug() to view shellcode. Can use int3 to break at shellcode. A cheat code! </p>
+            <div class="first-container">
+                <h3 class="notes-title entry">Program Security - Shellcoding Tips</h3>
+                <p class="entry">Build shellcode using as, ld, and objcopy.</p>
+                <p class="entry">View shellcode with od, hexdump.</p>
+                <p class="entry">Build shellcode using gcc and objcopy.</p>
+                <p class="entry">Build shellcode using python pwntools.</p>
+                <p class="entry">Write assembly in pwntools and view it with disasm().</p>
+                <p class="entry">Shellcraft</p>
+                <p class="entry">Write shellcode bytes into a file.</p>
+                <p class="entry">Use strace to debug.</p>
+                <p class="entry">Use gdb.debug_assembly() to debug assembly instructions. It launches a gdb sessions that starts the beginning of shellcode.</p>
+                <p class="entry">Always use p.interactive() for a process() until you understand why.</p>
+                <p class="entry">Use gdb.debug() to view shellcode. Can use int3 to break at shellcode. A cheat code! </p>
+            </div>
+            <div class="second-container">
+                <h3 class="notes-title entry">Program Security - Memory Corruption Tips</h3>
+                <p class="entry">A vulnerable program is given that does a buffer overread using the read() function. There is an important variable that determines which if-else condition is trigger. There is also a win() function.</p>
+                <p class="entry">Simplest way to memory corrupt is to input a shit load of data.</p>
+                <p class="entry">We can also use static analysis, tools like IDA, hexdump, gdb, to find the offset for the important variable. We will need address of start of input and address of important variable. The offset is the difference.</p>
+                <p class="entry">Another strategy is dynamic analysis with gdb. We can then poke around the program as it is running using effective breakpoints. At these breakpoints, we can examine registers and memory and much more.</p>
+                <p class="entry">gdb scripting. pwntools always breaks at start.</p>
+                <p class="entry">Cyclic value: a string where any 4-byte substring unique identifies the index. We can use this to find the padding size for the return address. Redirect control flow to win() function.</p>
+                <p class="entry">Describe a couple of complicated memory corruption techniques.</p>
+            </div>
         </div>
-
-        <!-- Notes entry LAST -->
-        <div class="notes-entry last">
-            <h3 class="notes-title entry">Program Security - Memory Corruption Tips</h3>
-            <p class="entry">A vulnerable program is given that does a buffer overread using the read() function. There is an important variable that determines which if-else condition is trigger. There is also a win() function.</p>
-            <p class="entry">Simplest way to memory corrupt is to input a shit load of data.</p>
-            <p class="entry">We can also use static analysis, tools like IDA, hexdump, gdb, to find the offset for the important variable. We will need address of start of input and address of important variable. The offset is the difference.</p>
-            <p class="entry">Another strategy is dynamic analysis with gdb. We can then poke around the program as it is running using effective breakpoints. At these breakpoints, we can examine registers and memory and much more.</p>
-            <p class="entry">gdb scripting. pwntools always breaks at start.</p>
-            <p class="entry">Cyclic value: a string where any 4-byte substring unique identifies the index. We can use this to find the padding size for the return address. Redirect control flow to win() function.</p>
-            <p class="entry">Describe a couple of complicated memory corruption techniques.</p>
-        </div>
-
-        <!-- Notes entry -->
+        
+        <!-- Two note entries -->
         <div class="notes-entry">
-            <h3 class="notes-title entry">Program Security - CSE466 - Robert - 08.29.24</h3>
-            <p class="entry">Meme review - people struggling with challenges, quasi-helpful meme, free cat /flag bug... boo Adical, </p>
+            <div class="first-container">
+                <h3 class="notes-title entry">Program Security - CSE466 - Robert - 08.29.24</h3>
+                <p class="entry">Meme review - people struggling with challenges, quasi-helpful meme, free cat /flag bug... boo Adical, </p>
+            </div>
+            <div class="second-container">
+
+            </div>
         </div>
 
     </div>
