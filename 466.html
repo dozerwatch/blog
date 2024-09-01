@@ -19,6 +19,29 @@
 
     <!-- Container for all class notes -->
     <div class="notes-container">
+        
+        <!-- Two note entries -->
+        <div class="notes-entry">
+            <div class="first-container">
+                <h3 class="notes-title entry">Program Security - CSE466 - Robert OH - 08.30.24</h3>
+                <p class="entry"></p>
+            </div>
+            <div class="second-container">
+                <h3 class="notes-title entry">Program Security - CSE466 - Robert - 08.29.24</h3>
+                <p class="entry">Meme review - people struggling with challenges, quasi-helpful meme, free cat /flag bug... boo Adical.</p>
+                <p class="entry">The cat /flag bug (lasted 3 hours) was caused by a new commit which chown 1000:1000 all files in /home/hacker that were not owned by hacker already. A user can sudo ln -s the flag to an arbitrary file in /home/hacker in practice mode. This creates a symbolic link to /flag in /home/hacker that is owned by root. Then everytime the user starts the challenge, the symbolic link gets chown 1000:1000 and that flows to the /flag file. So the /flag file will be owned by the hacker!</p>
+                <p class="entry">The fix is to chown -R 1000:1000 /home/hacker. This recursively chown 1000:1000 all files and directories and does not traverse any symbolic links by default. On the other hand, chown affects the referent of the symbolic link, rather than the symlink itself by default.</p>
+                <p class="entry">Global imports are good when hacking, but bad when programming.</p>
+                <p class="entry">By default, pwntools assumes a 32-bit architecture.</p>
+                <p class="entry">Use pwntool disasm() to look at shellcode bytes.</p>
+                <p class="entry">Look at felix cloutier documentation.</p>
+                <p class="entry">Use gdb.debug_assembly() to test shellcode.</p>
+                <p class="entry">Use process() & interactive() to test shellcode.</p>
+                <p class="entry">Draw inspiration from pwntools shellcraft.</p>
+                <p class="entry">Explain symbolic links. Use symlinks for shellcode.</p>
+                <p class="entry">f strings, gdb.debug with int3, .gdbinit</p>
+            </div>
+        </div>
 
         <!-- Two note entries -->
         <div class="notes-entry">
@@ -42,20 +65,9 @@
                 <p class="entry">Simplest way to memory corrupt is to input a shit load of data.</p>
                 <p class="entry">We can also use static analysis, tools like IDA, hexdump, gdb, to find the offset for the important variable. We will need address of start of input and address of important variable. The offset is the difference.</p>
                 <p class="entry">Another strategy is dynamic analysis with gdb. We can then poke around the program as it is running using effective breakpoints. At these breakpoints, we can examine registers and memory and much more.</p>
-                <p class="entry">gdb scripting. pwntools always breaks at start.</p>
+                <p class="entry">gdb scripting. pwntools always breaks at _start.</p>
                 <p class="entry">Cyclic value: a string where any 4-byte substring unique identifies the index. We can use this to find the padding size for the return address. Redirect control flow to win() function.</p>
                 <p class="entry">Describe a couple of complicated memory corruption techniques.</p>
-            </div>
-        </div>
-        
-        <!-- Two note entries -->
-        <div class="notes-entry">
-            <div class="first-container">
-                <h3 class="notes-title entry">Program Security - CSE466 - Robert - 08.29.24</h3>
-                <p class="entry">Meme review - people struggling with challenges, quasi-helpful meme, free cat /flag bug... boo Adical, </p>
-            </div>
-            <div class="second-container">
-
             </div>
         </div>
 
