@@ -1,0 +1,23 @@
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.notes-entry {
+    width: 33.26%;
+    border-right: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+
+.third {
+    border-right: none;
+}
+
+.entry {
+    margin: 10px 20px;
+}
+
+.notes-title {
+    margin-top: 20px;
+}
