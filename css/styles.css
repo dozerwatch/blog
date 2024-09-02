@@ -9,7 +9,6 @@
 .learns-container, .reflections-container {
     flex-direction: column;
     width: 50%;
-    height: 100%;
     align-items: center;
 }
 
