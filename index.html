@@ -38,12 +38,19 @@
             <div class="learns-container">
                 <div class="entry-container">
                     <h3 class="date entry">Tuesday - September 10, 2024</h3>
-                    <p class="entry"></p>
+                    <p class="entry">1. Kernel Security: level 11, 12.</p>
+                    <p class="entry">2. Great <a href="https://zolutal.github.io/understanding-paging/" target="_blank">walkthrough</a> of amd64 virtual address translation.</p>
+                    <p class="entry">3. Kernel Security: try level 8 with seccomp escape.</p>
+                    <br>
+                    <p class="entry">1. cr3: holds the PHYSICAL location of the highest level of the paging structure.</p>
+                    <p class="entry">2. Each process has its own Page Global Directory.</p>
+                    <p class="entry">3. In the kernel, there is a direct mapping from virtual memory to all physical memory starting at page_offset_base 0xffff888000000000.</p>
                 </div>
             </div>
             <div class="reflections-container">
                 <div class="entry-container">
-                    <p class="entry"></p>
+                    <p class="entry">I finished the kernel security module. Learned a lot about how memory is managed in Linux AMD64 and how to perform a page walk.</p>
+                    <p class="entry">Still need to log kernel security lecture notes and watch the new lectures and log those notes.</p>
                 </div>
             </div>
         </div>
